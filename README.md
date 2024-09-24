@@ -1,7 +1,7 @@
 # Administración de Sistemas Informáticos y Redes
 Este repositorio incluye actividades llevadas a cabo en el módulo Administración de Sistemas Informáticos y Redes
 
-![](img/Screenshot_4.png)
+![](img/banner-web-ASIR.jpg)
 
 **Tema 0 - Nombre tema 0**
 
