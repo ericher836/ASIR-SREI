@@ -1,6 +1,7 @@
 # Administración de Sistemas Informáticos y Redes
 Este repositorio incluye actividades llevadas a cabo en el módulo Administración de Sistemas Informáticos y Redes
 
+![](img/Screenshot_4.png)
 
 **Tema 0 - Nombre tema 0**
 
@@ -8,8 +9,6 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 | --- | --- |
 | Ejercicio 2 | Breve descripción 0.2 |
 | ... | ... |
-
-![](img/Screenshot_4.png)
 
 **Tema 1 - Nombre tema 1**
 
