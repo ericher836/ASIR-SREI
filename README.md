@@ -9,6 +9,8 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 | Ejercicio 2 | Breve descripción 0.2 |
 | ... | ... |
 
+[](img/Screenshot_4.png)
+
 **Tema 1 - Nombre tema 1**
 
 | Ejercicio 1 | Breve descripción 0.1 |
