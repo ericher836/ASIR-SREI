@@ -3,7 +3,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 
 ![](img/banner-web-ASIR.jpg)
 
-**Tema 0 - Nombre tema 0**
+**Tema 0 - Introducción**
 
 | [Ejercicio 1](Tema0/ActividadDeIntroducciónASREI.pdf) | Actividad de introducción a la asignatura |
 | --- | --- |
