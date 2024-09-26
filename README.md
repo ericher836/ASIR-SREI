@@ -5,7 +5,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 
 **Tema 0 - Nombre tema 0**
 
-| Ejercicio 1 | Breve descripción 0.1 |
+| ![Ejercicio 1](Tema 0/.pdf) | Actividad de introducción a la asignatura |
 | --- | --- |
 | Ejercicio 2 | Breve descripción 0.2 |
 | ... | ... |
