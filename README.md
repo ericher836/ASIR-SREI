@@ -3,7 +3,7 @@ Este repositorio incluye actividades llevadas a cabo en el m처dulo Administraci�
 
 ![](img/banner-web-ASIR.jpg)
 
-**Tema 0 - Introducci처n**
+**[Tema 0](Tema0) - Introducci처n**
 
 | [Ejercicio 1](Tema0/ActividadDeIntroducci처nASREI.pdf) | Actividad de introducci처n a la asignatura |
 | --- | --- |
