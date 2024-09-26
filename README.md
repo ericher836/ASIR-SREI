@@ -12,11 +12,9 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 | Ejercicio 4 | Práctica cUrl |
 | Ejercicio 5 | Práctica servidor web |
 | Ejercicio 6 | Repositorio Github |
-| ... | ... |
 
 **Tema 1 - Nombre tema 1**
 
 | Ejercicio 1 | Breve descripción 0.1 |
 | --- | --- |
 | Ejercicio 2 | Breve descripción 0.2 |
-| ... | ... |
