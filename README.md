@@ -5,7 +5,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 
 **[Tema 0](Tema0) - Introducción**
 
-| Ejercicios de introducción |
+| Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
 | [Ejercicio 1](Tema0/ActividadDeIntroducciónASREI.pdf) | Introducción a HTTP |
 | Ejercicio 2 | Comparativa entre UDP y TCP |
