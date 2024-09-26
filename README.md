@@ -5,7 +5,7 @@ Este repositorio incluye actividades llevadas a cabo en el m처dulo Administraci�
 
 **Tema 0 - Nombre tema 0**
 
-| ![](Tema 0/Actividad de introducci처n a SREI.pdf) | Actividad de introducci처n a la asignatura |
+| ![](/Tema 0/Actividad de introducci처n a SREI.pdf) | Actividad de introducci처n a la asignatura |
 | --- | --- |
 | Ejercicio 2 | Breve descripci처n 0.2 |
 | ... | ... |
