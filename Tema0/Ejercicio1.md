@@ -29,14 +29,18 @@ y DELETE, que borra el recurso
 **Response. Códigos.**
 
 Códigos con formato 1xx son respuestas informativas. Indica que la petición ha sido recibida y se está 
-procesando. 
-Códigos con formato 2xx son respuestas correctas. Indica que la petición ha sido procesada correctamente. 
+procesando.
+
+Códigos con formato 2xx son respuestas correctas. Indica que la petición ha sido procesada correctamente.
+
 Códigos con formato 3xx son respuestas de redirección. Indica que el cliente necesita realizar más acciones 
-para finalizar la petición. 
+para finalizar la petición.
+
 Códigos con formato 4xx son errores causados por el cliente. Indica que ha habido un error en el procesado de 
-la petición a causa de que el cliente ha hecho algo mal. 
+la petición a causa de que el cliente ha hecho algo mal.
+
 Códigos con formato 5xx son errores causados por el servidor. Indica que ha habido un error en el procesado 
-de la petición a causa de un fallo en el servidor.            
+de la petición a causa de un fallo en el servidor.
 
 **Content type. Tipos principales.**
 
