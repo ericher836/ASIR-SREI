@@ -16,7 +16,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 
 **Tema 1 - Nombre tema 1**
 
-| Número de ejercicio | [Ejercicios de introducción]() |
+| Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
 | Ejercicio 1 | Breve descripción 0.1 |
 | Ejercicio 2 | Breve descripción 0.2 |
