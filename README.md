@@ -8,11 +8,11 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Administraci�
 | Número de ejercicio | [Ejercicios de introducción](Tema0/ActividadDeIntroducciónASREI.pdf) |
 | --- | --- |
 | [Ejercicio 1](Tema0/Ejercicio1.md) | Introducción a HTTP |
-| Ejercicio 2 | Comparativa entre UDP y TCP |
-| Ejercicio 3 | Práctica telnet/http |
-| Ejercicio 4 | Práctica cUrl |
-| Ejercicio 5 | Práctica servidor web |
-| Ejercicio 6 | Repositorio Github |
+| [Ejercicio 2](Tema0/Ejercicio2.md) | Comparativa entre UDP y TCP |
+| [Ejercicio 3](Tema0/Ejercicio3.md) | Práctica telnet/http |
+| [Ejercicio 4](Tema0/Ejercicio4.md) | Práctica cUrl |
+| [Ejercicio 5](Tema0/Ejercicio5.md) | Práctica servidor web |
+| [Ejercicio 6](Tema0/Ejercicio6.md) | Repositorio Github |
 
 **Tema 1 - Nombre tema 1**
 
