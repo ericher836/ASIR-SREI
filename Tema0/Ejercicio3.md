@@ -17,6 +17,7 @@ GET / HTTP/1.1
 
 ![](/img/intro/2.png)
 
+2.
 ```
 telnet localhost 80
 ```
