@@ -31,3 +31,11 @@ GET / HTTP/1.1
 ```
 
 ![](/img/intro/4.png)
+
+Por último, probamos.
+
+```
+OPTIONS / HTTP/1.1.
+```
+
+![](/img/intro/5.png)
