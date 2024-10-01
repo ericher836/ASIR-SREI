@@ -5,7 +5,7 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 
 **Tema 0 - Introducción**
 
-| Número de ejercicio | Ejercicios de introducción |
+| Número de ejercicio | Descripción del ejercicio |
 | --- | --- |
 | [Ejercicio 1](Tema0/Ejercicio1.md) | Introducción a HTTP |
 | [Ejercicio 2](Tema0/Ejercicio2.md) | Comparativa entre UDP y TCP |
