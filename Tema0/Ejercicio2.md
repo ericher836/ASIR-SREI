@@ -1,5 +1,4 @@
-# UDP and TCP: Comparison of Transport   
-Protocols
+# UDP and TCP: Comparison of Transport Protocols
 
 **Diferencias entre udp y tcp?**
 
