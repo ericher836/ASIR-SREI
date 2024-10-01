@@ -12,3 +12,9 @@ Y al ir a la dirección localhost:8000 nos aparecerá la página que tenemos por
 ![](/img/intro/Screenshot_2.png)
 
 ![](/img/intro/Screenshot_3.png)
+
+1. HTTP Server
+
+Hay algún tipo de error en el código.
+
+![](/img/intro/Screenshot_4.png)
