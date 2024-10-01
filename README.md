@@ -1,5 +1,5 @@
 # Administración de Sistemas Informáticos y Redes
-Este repositorio incluye actividades llevadas a cabo en el módulo Administración de Sistemas Informáticos y Redes de la asignatura Servicios de Red e Internet
+Este repositorio incluye actividades llevadas a cabo en el ciclo Administración de Sistemas Informáticos y Redes de la asignatura Servicios de Red e Internet
 
 ![](img/banner-web-ASIR.jpg)
 
