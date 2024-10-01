@@ -6,4 +6,4 @@ Probamos los siguientes ejemplos.
 telnet www.profesordeinformatica.com 80
 ```
 
-![](img/intro/1.png)
+![](ASIR-SREI/img/intro/1.png)
