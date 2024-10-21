@@ -18,5 +18,5 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 
 | Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
-| Ejercicio 1 | Breve descripción 0.1 |
+| [Ejercicio 1](Tema1/scripts.md) | Scripts en Apache |
 | Ejercicio 2 | Breve descripción 0.2 |
