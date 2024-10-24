@@ -102,7 +102,16 @@ fi
 ```
 
 ![](/Tema1/img/Screenshot_52.png)
+
+Hacemos las comprobaciones.
+
 ![](/Tema1/img/Screenshot_53.png)
+
+Reiniciamos el servicio y comprobamos que de verdad se ha añadido al fichero.
+
 ![](/Tema1/img/Screenshot_54.png)
 ![](/Tema1/img/Screenshot_55.png)
+
+Y vemos que ahora al introducir el recurso en la URL, nos lleva a este.
+
 ![](/Tema1/img/Screenshot_56.png)
