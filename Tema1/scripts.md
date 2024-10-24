@@ -7,3 +7,8 @@
 ![](/Tema1/img/Screenshot_49.png)
 ![](/Tema1/img/Screenshot_50.png)
 ![](/Tema1/img/Screenshot_51.png)
+![](/Tema1/img/Screenshot_52.png)
+![](/Tema1/img/Screenshot_53.png)
+![](/Tema1/img/Screenshot_54.png)
+![](/Tema1/img/Screenshot_55.png)
+![](/Tema1/img/Screenshot_56.png)
