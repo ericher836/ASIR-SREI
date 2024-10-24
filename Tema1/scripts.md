@@ -32,7 +32,7 @@ Hacemos las comprobaciones.
 
 Y comprobamos que de verdad se ha añadido al fichero.
 
-![](/Tema1/img/Screenshot_44.1.png)
+![](/Tema1/img/Screenshot_44_1.png)
 
 + Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts
 
