@@ -21,11 +21,17 @@ else
   cp /etc/apache2/ports.conf /etc/apache2/ports.conf.bak
   echo "Listen $1" >> /etc/apache2/ports.conf
   echo "Puerto $1 añadido al fichero de escucha de puertos"
+fi
 ```
 
-![](/Tema1/img/Screenshot_44.png)
 ![](/Tema1/img/Screenshot_45.png)
+
+Hacemos las comprobaciones.
+
 ![](/Tema1/img/Screenshot_46.png)
+
+Y comprobamos que de verdad se ha añadido al fichero.
+
 ![](/Tema1/img/Screenshot_44.1.png)
 
 + Crea un script que añada un nombre de dominio y una ip al fichero hosts. Debemos comprobar que no existe dicho dominio en el fichero hosts
