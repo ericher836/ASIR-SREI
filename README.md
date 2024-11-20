@@ -19,4 +19,4 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 | Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
 | [Ejercicio 1](Tema1/scripts.md) | Scripts en Apache |
-| [Ejercicio 2](Tema1/trabajo1trimestre.md) | Trabajo 1º trimestre |
+| [Ejercicio 2](Tema1/trabajo1trimestre.md) | Práctica Servidores Web 1º Trimestre |
