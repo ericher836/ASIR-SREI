@@ -1,5 +1,14 @@
 # Instalación del servidor web Apache
 
+
+
+
+
+
+
+
+
+
 Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
 ```
