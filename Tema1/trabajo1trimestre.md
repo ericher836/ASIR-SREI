@@ -207,7 +207,9 @@ sudo wget https://wordpress.org/latest.tar.gz
 
 Lo descomprimimos.
 
+```
 tar -xzf latest.tar.gz
+```
 
 ![](/Tema1/img2/Screenshot_30.png)
 
