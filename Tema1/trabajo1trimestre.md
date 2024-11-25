@@ -12,13 +12,14 @@ sudo apt update
 sudo apt upgrade
 ```
 
+![](/Tema1/img2/Screenshot_2.png)
+
 E instalamos el servicio de Apache.
 
 ```
 sudo apt install apache2
 ```
 
-![](/Tema1/img2/Screenshot_2.png)
 ![](/Tema1/img2/Screenshot_3.png)
 ![](/Tema1/img2/Screenshot_4.png)
 ![](/Tema1/img2/Screenshot_5.png)
