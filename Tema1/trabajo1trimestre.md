@@ -1,14 +1,5 @@
 # Instalación del servidor web Apache
 
-
-
-
-
-
-
-
-
-
 Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
 ```
@@ -72,15 +63,52 @@ Y podemos observar que el DNS funciona. He modificado el index.html del dominio 
 
 # Activar los módulos necesarios para ejecutar php y acceder a mysql
 
+Instalamos el servicio de mysql.
+
+```
+sudo apt install mysql-server
+```
+
 ![](/Tema1/img2/Screenshot_7.png)
+
+```
+sudo mysql_secure_installation
+```
+
 ![](/Tema1/img2/Screenshot_8.png)
 ![](/Tema1/img2/Screenshot_9.png)
 ![](/Tema1/img2/Screenshot_10.png)
 ![](/Tema1/img2/Screenshot_11.png)
 ![](/Tema1/img2/Screenshot_12.png)
+
+Comprobamos que funciona.
+
+```
+sudo mysql
+```
+
 ![](/Tema1/img2/Screenshot_13.png)
+
+```
+exit
+```
+
 ![](/Tema1/img2/Screenshot_14.png)
+
+Y a continuación instalamos php.
+
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+
 ![](/Tema1/img2/Screenshot_15.png)
+
+Y comprobamos que está instalado revisando su versión.
+
+```
+php -v
+```
+
 ![](/Tema1/img2/Screenshot_16.png)
 
 # Instala y configura wordpress
