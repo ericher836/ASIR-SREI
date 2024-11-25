@@ -1,8 +1,23 @@
 # Instalación del servidor web Apache
 
-Primero creamos un archivo ejecutable para escribir el script.
+Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
+
+```
+sudo apt update
+```
 
 ![](/Tema1/img2/Screenshot_1.png)
+
+```
+sudo apt upgrade
+```
+
+E instalamos el servicio de Apache.
+
+```
+sudo apt install apache2
+```
+
 ![](/Tema1/img2/Screenshot_2.png)
 ![](/Tema1/img2/Screenshot_3.png)
 ![](/Tema1/img2/Screenshot_4.png)
@@ -116,20 +131,4 @@ Primero creamos un archivo ejecutable para escribir el script.
 ![](/Tema1/img2/Screenshot_87.png)
 ![](/Tema1/img2/Screenshot_88.png)
 ![](/Tema1/img2/Screenshot_89.png)
-
-Y dentro de él escribimos lo siguiente:
-
-```
-#!/bin/bash
-
-if [ $# -eq 0 ]; then
-  echo "ERROR. No se han pasado parámetros para el número de puerto de escucha"
-elif grep -q "Listen $1" /etc/apache2/ports.conf; then
-  echo "ERROR. El puerto ya existe"
-else
-  cp /etc/apache2/ports.conf /etc/apache2/ports.conf.bak
-  echo "Listen $1" >> /etc/apache2/ports.conf
-  echo "Puerto $1 añadido al fichero de escucha de puertos"
-fi
-```
 
