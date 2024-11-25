@@ -56,17 +56,29 @@ Primero creamos un archivo ejecutable para escribir el script.
 ![](/Tema1/img2/Screenshot_42.png)
 ![](/Tema1/img2/Screenshot_43.png)
 ![](/Tema1/img2/Screenshot_44.png)
+
+# Activar el módulo wsgi
+
 ![](/Tema1/img2/Screenshot_45.png)
+
+# Crea y despliega una pequeña aplicación python
+
 ![](/Tema1/img2/Screenshot_46.png)
 ![](/Tema1/img2/Screenshot_47.png)
 ![](/Tema1/img2/Screenshot_48.png)
 ![](/Tema1/img2/Screenshot_49.png)
 ![](/Tema1/img2/Screenshot_50.png)
 ![](/Tema1/img2/Screenshot_51.png)
+
+# Protegemos el acceso a la aplicación python mediante autenticación
+
 ![](/Tema1/img2/Screenshot_52.png)
 ![](/Tema1/img2/Screenshot_53.png)
 ![](/Tema1/img2/Screenshot_54.png)
 ![](/Tema1/img2/Screenshot_55.png)
+
+# Instala y configura awstat.
+
 ![](/Tema1/img2/Screenshot_56.png)
 ![](/Tema1/img2/Screenshot_57.png)
 ![](/Tema1/img2/Screenshot_58.png)
@@ -79,6 +91,9 @@ Primero creamos un archivo ejecutable para escribir el script.
 ![](/Tema1/img2/Screenshot_65.png)
 ![](/Tema1/img2/Screenshot_66.png)
 ![](/Tema1/img2/Screenshot_67.png)
+
+# Instalación del servidor web nginx
+
 ![](/Tema1/img2/Screenshot_68.png)
 ![](/Tema1/img2/Screenshot_69.png)
 ![](/Tema1/img2/Screenshot_70.png)
