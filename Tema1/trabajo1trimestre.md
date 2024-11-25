@@ -1,8 +1,4 @@
-# Trabajando con scripts
-
-Creamos un script para cada uno de los siguientes problemas:
-
-+ Crea un script que añada un puerto de escucha en el fichero de configuración de Apache. El puerto se recibirá como parámetro en la llamada y se comprobará que no esté ya presente en el fichero de configuración.
+# Instalación del servidor web Apache
 
 Primero creamos un archivo ejecutable para escribir el script.
 
@@ -16,6 +12,9 @@ Primero creamos un archivo ejecutable para escribir el script.
 ![](/Tema1/img2/Screenshot_6_2.png)
 ![](/Tema1/img2/Screenshot_6_3.png)
 ![](/Tema1/img2/Screenshot_6_4.png)
+
+# Activar los módulos necesarios para ejecutar php y acceder a mysql
+
 ![](/Tema1/img2/Screenshot_7.png)
 ![](/Tema1/img2/Screenshot_8.png)
 ![](/Tema1/img2/Screenshot_9.png)
@@ -26,6 +25,9 @@ Primero creamos un archivo ejecutable para escribir el script.
 ![](/Tema1/img2/Screenshot_14.png)
 ![](/Tema1/img2/Screenshot_15.png)
 ![](/Tema1/img2/Screenshot_16.png)
+
+# Instala y configura wordpress
+
 ![](/Tema1/img2/Screenshot_17.png)
 ![](/Tema1/img2/Screenshot_18.png)
 ![](/Tema1/img2/Screenshot_19.png)
