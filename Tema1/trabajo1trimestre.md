@@ -21,11 +21,43 @@ sudo apt install apache2
 ```
 
 ![](/Tema1/img2/Screenshot_3.png)
+
+Vamos a comprobar nuestra dirección IP para ver si se ha instalado correctamente (también podemos hacerlo con localhost).
+
+```
+sudo apt install net-tools
+```
+
 ![](/Tema1/img2/Screenshot_4.png)
+
+```
+ifconfig
+```
+
 ![](/Tema1/img2/Screenshot_5.png)
+
+Y vemos que funciona correctamente el servicio de servidor.
+
 ![](/Tema1/img2/Screenshot_6.png)
+
+Ahora vamos a añadir al fichero hosts el nombre de dominio que tendremos para cada uno de ellos.
+
 ![](/Tema1/img2/Screenshot_6_1.png)
+
+Comprobamos y reiniciamos Apache.
+
+```
+apachectl configtest
+```
+
+```
+sudo service apache2 restart
+```
+
 ![](/Tema1/img2/Screenshot_6_2.png)
+
+Y podemos observar que el DNS funciona. He modificado el index.html del dominio para que aparezca la siguiente página.
+
 ![](/Tema1/img2/Screenshot_6_3.png)
 ![](/Tema1/img2/Screenshot_6_4.png)
 
