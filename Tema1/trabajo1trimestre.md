@@ -523,27 +523,232 @@ Y si accedemos a XXX/awstats/awstats.pl podemos ver las estadísticas de visita 
 
 # Instalación del servidor web nginx
 
-![](/Tema1/img2/Screenshot_67.png)
-![](/Tema1/img2/Screenshot_68.png)
-![](/Tema1/img2/Screenshot_69.png)
-![](/Tema1/img2/Screenshot_70.png)
-![](/Tema1/img2/Screenshot_71.png)
-![](/Tema1/img2/Screenshot_72.png)
-![](/Tema1/img2/Screenshot_73.png)
-![](/Tema1/img2/Screenshot_74.png)
-![](/Tema1/img2/Screenshot_75.png)
-![](/Tema1/img2/Screenshot_76.png)
-![](/Tema1/img2/Screenshot_77.png)
-![](/Tema1/img2/Screenshot_78.png)
-![](/Tema1/img2/Screenshot_79.png)
-![](/Tema1/img2/Screenshot_80.png)
-![](/Tema1/img2/Screenshot_81.png)
-![](/Tema1/img2/Screenshot_82.png)
-![](/Tema1/img2/Screenshot_83.png)
-![](/Tema1/img2/Screenshot_84.png)
-![](/Tema1/img2/Screenshot_85.png)
-![](/Tema1/img2/Screenshot_86.png)
-![](/Tema1/img2/Screenshot_87.png)
-![](/Tema1/img2/Screenshot_88.png)
-![](/Tema1/img2/Screenshot_89.png)
+En mi caso yo he elegido nginx para instalar el segundo servidor.
 
+```
+sudo apt install nginx
+```
+
+![](/Tema1/img2/Screenshot_67.png)
+
+Modificamos su archivo de configuración.
+
+```
+sudo nano /etc/nginx/nginx.conf
+```
+
+![](/Tema1/img2/Screenshot_68.png)
+
+De forma que el http escuche en el puerto 8080.
+
+```
+listen 8080;
+listen [::]:8080;
+```
+
+![](/Tema1/img2/Screenshot_69.png)
+
+Creamos un nuevo fichero de configuración.
+
+```
+sudo nano /etc/nginx/sites-available/default
+```
+
+![](/Tema1/img2/Screenshot_70.png)
+
+Y agregamos lo siguiente:
+
+```
+listen 8080 default_server;
+listen [::]:8080 default_server;
+```
+
+![](/Tema1/img2/Screenshot_71.png)
+
+Comprobamos la configuración y reiniciamos nginx.
+
+```
+sudo nginx -t
+```
+
+```
+sudo systemctl restart nginx
+```
+
+![](/Tema1/img2/Screenshot_72.png)
+
+Creamos el directorio donde estarán nuestros archivos.
+
+```
+sudo mkdir /var/www/nginx
+```
+
+![](/Tema1/img2/Screenshot_73.png)
+
+Y dentro creamos un index.html
+
+```
+sudo nano /var/www/nginx/index.html
+```
+
+![](/Tema1/img2/Screenshot_74.png)
+
+De la siguiente forma.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+![](/Tema1/img2/Screenshot_75.png)
+
+Y en el fichero de configuración de antes cambiamos el root a este nuevo directorio.
+
+```
+root /var/www/nginx;
+```
+
+![](/Tema1/img2/Screenshot_76.png)
+
+Y agregamos el orden de index y el server_name.
+
+```
+index index.html index.htm index.nginx-debian.html;
+
+server_name XXX;
+```
+
+![](/Tema1/img2/Screenshot_78.png)
+
+Agregamos el nombre del dominio al fichero hosts.
+
+```
+sudo nano /etc/hosts
+```
+
+![](/Tema1/img2/Screenshot_79.png)
+
+```
+127.0.0.1      XXX
+```
+
+![](/Tema1/img2/Screenshot_80.png)
+
+Reiniciamos el servidor.
+
+```
+sudo systemctl restart nginx
+```
+
+![](/Tema1/img2/Screenshot_77.png)
+
+Y ya podemos acceder con el nombre del dominio y el puerto 8080.
+
+![](/Tema1/img2/Screenshot_81.png)
+
+Ahora instalamos phpmyadmin.
+
+```
+sudo apt install phpmyadmin
+```
+
+![](/Tema1/img2/Screenshot_82.png)
+
+Creamos un enlace simbólico.
+
+```
+sudo ln -s /usr/share/phpmyadmin /var/www/nginx/phpmyadmin
+```
+
+![](/Tema1/img2/Screenshot_83.png)
+
+Y modificamos los permisos.
+
+```
+sudo chown -R www-data:www-data /usr/share/phpmyadmin
+```
+
+```
+sudo chmod 755 /usr/share/phpmyadmin
+```
+
+![](/Tema1/img2/Screenshot_84.png)
+
+En el fichero de configuración de nuestro sitio agregamos lo siguiente.
+
+```
+location / {
+  try_files $uri $uri/ =404;
+}
+
+location /phpmyadmin {
+  root /var/www/nginx;
+  index index.php index.html;
+
+  location ~ ^/phpmyadmin/(doc|sql|setup)/ {
+    deny all;
+  }
+
+  location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  }
+}
+```
+
+![](/Tema1/img2/Screenshot_85.png)
+
+Instalamos php-fpm.
+
+```
+sudo apt install php8.1-fpm
+```
+
+![](/Tema1/img2/Screenshot_86.png)
+
+Y ahora podemos acceder a phpmyadmin en nuestro dominio con XXX:8080/phpmyadmin.
+
+![](/Tema1/img2/Screenshot_87.png)
+
+Vamos a crear un usuario para entrar.
+
+```
+sudo mysql -y root -p
+```
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'usuario';
+```
+
+```
+exit;
+```
+
+![](/Tema1/img2/Screenshot_88.png)
+
+Y ya tenemos phpmyadmin listo y configurado.
+
+![](/Tema1/img2/Screenshot_89.png)
