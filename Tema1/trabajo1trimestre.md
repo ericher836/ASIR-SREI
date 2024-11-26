@@ -415,21 +415,115 @@ Una vez introducidas tenemos acceso de nuevo.
 
 # Instala y configura awstat.
 
+Instalamos el servicio.
+
+```
+sudo apt-get install awstats
+```
+
 ![](/Tema1/img2/Screenshot_56.png)
+
+Y activamos el módulo cgi y reiniciamos apache
+
+```
+sudo a2enmod cgi
+```
+
+```
+sudo systemctl restart apache2
+```
+
 ![](/Tema1/img2/Screenshot_57.png)
+
+Modificamos el archivo de configuración de awstats.
+
+```
+sudo nano /etc/awstats/awstats.conf
+```
+
 ![](/Tema1/img2/Screenshot_58.png)
+
+Y hacemos los siguientes cambios.
+
+```
+SiteDomain="XXX"
+```
+
+```
+HostAliases="XXX localhost 127.0.0.1"
+```
+
 ![](/Tema1/img2/Screenshot_59.png)
+
+```
+AllowToUpdateStatsFromBrowser=1
+```
+
 ![](/Tema1/img2/Screenshot_60.png)
+
+Generamos las estadísticas iniciales.
+
+```
+sudo /usr/lib/cgi-bin/awstats.pl-config=XXX -update
+```
+
 ![](/Tema1/img2/Screenshot_61.png)
+
+Y configuramos Apache para awstats.
+
+```
+sudo cp -r /usr/lib/cgi-bin /var/www/XXX
+```
+
+```
+sudo chown -R www-data:www-data /var/www/XXX/cgi-bin
+```
+
+```
+sudo chmod -R 755 /var/www/XXX/cgi-bin
+```
+
 ![](/Tema1/img2/Screenshot_62.png)
+
+Vamos a modificar la configuración de awstats en Apache (creamos el archivo).
+
+```
+sudo nano /etc/apache2/conf-available/awstats.conf
+```
+
 ![](/Tema1/img2/Screenshot_63.png)
+
+Y agregamos lo siguiente.
+
+```
+Alias /awstatsclasses "/usr/share/awstats/lib"
+Alias /awstats-icon "/usr/share/awstats/icon/"
+Alias /awstatscss "/usr/share/doc/awstats/examples/css"
+ScriptAlias /awstats/ /usr/lib/cgi-bin/
+Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+```
+
 ![](/Tema1/img2/Screenshot_64.png)
+
+Habilitamos la configuración y reiniciamos Apache.
+
+```
+sudo a2enconf awstats
+```
+
+```
+sudo systemctl reload apache2
+```
+
 ![](/Tema1/img2/Screenshot_65.png)
+
+Y si accedemos a XXX/awstats/awstats.pl podemos ver las estadísticas de visita de nuestro dominio.
+
 ![](/Tema1/img2/Screenshot_66.png)
-![](/Tema1/img2/Screenshot_67.png)
 
 # Instalación del servidor web nginx
 
+![](/Tema1/img2/Screenshot_67.png)
 ![](/Tema1/img2/Screenshot_68.png)
 ![](/Tema1/img2/Screenshot_69.png)
 ![](/Tema1/img2/Screenshot_70.png)
