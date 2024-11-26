@@ -309,22 +309,108 @@ Pero al entrar en la página principal de nuestro dominio veremos la página pri
 
 # Activar el módulo wsgi
 
+Activamos el módulo wsgi para permitir la ejecución de aplicaciones Python.
+
+```
+sudo apt-get install libapache2-mod-wsgi-py3
+```
+
 ![](/Tema1/img2/Screenshot_45.png)
 
 # Crea y despliega una pequeña aplicación python
 
+Primero vamos a crear el direcotio para la aplicación y los logs.
+
+```
+cd /var/www/XXX
+```
+
+```
+mkdir mypythonapp
+```
+
+```
+mkdir public_html
+```
+
+```
+mkdir logs
+```
+
 ![](/Tema1/img2/Screenshot_46.png)
+
+Y creamos la aplicación Python
+
+```
+echo '# -*- coding: utf-8 -*-' > mypythonapp/controller.py
+```
+
 ![](/Tema1/img2/Screenshot_47.png)
-![](/Tema1/img2/Screenshot_48.png)
+
+Y escribimos el siguiente código dentro del archivo.
+
+```
+def application(environ, start_response):
+  output = b'<p>Bienvenido a mi <b>PythonApp</b>!!!</p>'
+  start_responde('200 OK', [('Content-Type', 'text/html; charset=utf-8')])
+  return [output]
+```
+
 ![](/Tema1/img2/Screenshot_49.png)
+
+Y en la configuración de nuestro dominio XXX agregamos el siguiente código.
+
+```
+DocumentRoot /var/www/XXX/public_html
+WSGIScriptAlias / /var/www/XXX/mypythonapp/controller.py
+ErrorLog /var/www/XXX/logs/error.log
+CustomLog /var/www/XXX/logs/access.log combined
+
+<Directory />
+  Options FollowSymLinks
+  AllowOverride All
+</Directory>
+```
+
 ![](/Tema1/img2/Screenshot_50.png)
+
+Y ya podemos acceder.
+
 ![](/Tema1/img2/Screenshot_51.png)
 
 # Protegemos el acceso a la aplicación python mediante autenticación
 
+Creamos dentro de nuestro directorio otro llamado passwd, y creamos las credenciales.
+
+```
+mkdir /var/www/XXX/passwd
+```
+
+```
+htpasswd -c /var/www/XXX/passwd/passwords usuario
+```
+
 ![](/Tema1/img2/Screenshot_52.png)
+
+Ahora dentro del fichero de configuración del servidor agregamos el siguiente código.
+
+```
+<Directory /var/www/XXX/mypythonapp>
+  AuthType Basic
+  AuthName "Restricted Files"
+  AuthUserFile /var/www/XXX/passwd/passwords
+  Require user usuario
+</Directory>
+```
+
 ![](/Tema1/img2/Screenshot_53.png)
+
+Y ahora nos pide las credenciales al intentar acceder.
+
 ![](/Tema1/img2/Screenshot_54.png)
+
+Una vez introducidas tenemos acceso de nuevo.
+
 ![](/Tema1/img2/Screenshot_55.png)
 
 # Instala y configura awstat.
