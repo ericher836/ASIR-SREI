@@ -464,7 +464,7 @@ AllowToUpdateStatsFromBrowser=1
 Generamos las estadísticas iniciales.
 
 ```
-sudo /usr/lib/cgi-bin/awstats.pl-config=XXX -update
+sudo /usr/lib/cgi-bin/awstats.pl -config=XXX -update
 ```
 
 ![](/Tema1/img2/Screenshot_61.png)
