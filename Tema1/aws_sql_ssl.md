@@ -20,6 +20,8 @@ sudo apt-get install apache2
 
 ![](/Tema1/img3/Screenshot_22.png)
 
+# Instalación del servidor web Apache
+
 ```
 sudo apt-get install apache2 php7.0 libapruti11-dbd-mysql -y
 ```
@@ -167,6 +169,8 @@ sudo systemctl restart apache2
 ![](/Tema1/img3/Screenshot_39.png)
 ![](/Tema1/img3/Screenshot_40.png)
 ![](/Tema1/img3/Screenshot_41.png)
+
+# Instalación del servidor web Apache
 
 ```
 
