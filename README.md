@@ -20,3 +20,4 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 | --- | --- |
 | [Ejercicio 1](Tema1/scripts.md) | Scripts en Apache |
 | [Ejercicio 2](Tema1/trabajo1trimestre.md) | Práctica Servidores Web 1º Trimestre |
+| [Ejercicio 3](Tema1/aws_sql_ssl.md) | Práctica AWS autenticación SQL y certificado SSL|
