@@ -173,91 +173,73 @@ sudo systemctl restart apache2
 # Instalación del servidor web Apache
 
 ```
-
+sudo uf allow "Apache Full"
 ```
 
 ![](/Tema1/img3/Screenshot_42.png)
 
 ```
-
+sudo a2enmod ssl
 ```
 
 ![](/Tema1/img3/Screenshot_43.png)
 
 ```
-
+sudo systemctl restart apache2
 ```
 
 ![](/Tema1/img3/Screenshot_44.png)
 
 ```
-
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 ```
 
 ![](/Tema1/img3/Screenshot_45.png)
 
 ```
-
+Country Name (2 letter code) [XX]:ES
+State or Province Name (full name) []:Huelva
+Locality Name (eg, city) [Default City]:Huelva
+Organization Name (eg, company) [Default Company Ltd]:LAMARISMA
+Organizational Unit Name (eg, section) []:ASIR
+Common Name (eg, your name or your server's hostname) []:tu_ip
+Email Address []:webmaster@example.com
 ```
 
 ![](/Tema1/img3/Screenshot_46.png)
 
 ```
-
+sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
 ![](/Tema1/img3/Screenshot_47.png)
 
 ```
+<VirtualHost *:443>
+   ServerName tu_ip
+   DocumentRoot /var/www/html
+```
 
+```
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+</VirtualHost>
 ```
 
 ![](/Tema1/img3/Screenshot_48.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_49.png)
 
 ```
+sudo apache2ctl configtest
+```
 
+```
+sudo systemctl reload apache2
 ```
 
 ![](/Tema1/img3/Screenshot_50.png)
-
-```
-
-```
-
-![](/Tema1/img3/Screenshot_51.png)
-
-```
-
-```
-
-![](/Tema1/img3/Screenshot_52.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_54.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_55.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_56.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_57.png)
