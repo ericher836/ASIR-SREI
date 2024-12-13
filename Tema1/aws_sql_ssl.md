@@ -14,13 +14,17 @@ sudo apt upgrade
 
 ![](/Tema1/img3/Screenshot_21.png)
 
+E instalamos Apache.
+
 ```
 sudo apt-get install apache2
 ```
 
 ![](/Tema1/img3/Screenshot_22.png)
 
-# Instalación del servidor web Apache
+# Autenticación MySQL
+
+Primero instalamos PHP, MySQL y MariaDB.
 
 ```
 sudo apt-get install apache2 php7.0 libapruti11-dbd-mysql -y
@@ -34,6 +38,8 @@ sudo apt-get install mariadb-server mariadb-client -y
 
 ![](/Tema1/img3/Screenshot_24.png)
 
+Y activamos los servicios.
+
 ```
 sudo systemctl enable apache2
 ```
@@ -44,15 +50,21 @@ sudo systemctl enable mysql
 
 ![](/Tema1/img3/Screenshot_25.png)
 
+Entramos en mysql.
+
 ```
 sudo mysql -u root -p
 ```
+
+Y creamos una base de datos.
 
 ```
 create database defaultsite_db;
 ```
 
 ![](/Tema1/img3/Screenshot_26.png)
+
+Le damos permisos totales al admin.
 
 ```
 GRANT SELECT, INSERT, UPDATE, DELETE ON defaultsite_db.* TO 'defaultsite_admin'@'localhost' IDENTIFIED BY 'usuario';
@@ -72,11 +84,15 @@ flush privileges;
 
 ![](/Tema1/img3/Screenshot_29.png)
 
+Entramos en la base de datos.
+
 ```
 use defaultsite_db;
 ```
 
 ![](/Tema1/img3/Screenshot_30.png)
+
+Y creamos una tabla para los usuarios autenticados.
 
 ```
 create table mysql_auth ( username varchar(191) not null, passwd varchar(191), groups varchar(191), primary key (username) );
@@ -84,17 +100,23 @@ create table mysql_auth ( username varchar(191) not null, passwd varchar(191), g
 
 ![](/Tema1/img3/Screenshot_31.png)
 
+Transformamos una contraseña a hash para hacerlo más seguro.
+
 ```
 htpasswd -bns siteuser siteuser
 ```
 
 ![](/Tema1/img3/Screenshot_32.png)
 
+E insertamos los datos en la tabla que hemos creado en la base de datos.
+
 ```
 INSERT INTO `mysql_auth` (`username`, `passwd`, `groups`) VALUES('siteuser', '{SHA}tk7HEH6Wo7SKT6+3FHCgiGnJ6dA=', 'sitegroup');
 ```
 
 ![](/Tema1/img3/Screenshot_33.png)
+
+Habilitamos los módulos necesarios.
 
 ```
 sudo a2enmod dbd
@@ -114,6 +136,8 @@ sudo a2enmod authn_socache
 
 ![](/Tema1/img3/Screenshot_34.png)
 
+Creamos el directorio que estará protegido.
+
 ```
 sudo mkdir /var/www/html/protecteddir
 ```
@@ -124,11 +148,15 @@ sudo chown -R www-data:www-data /var/www/html/protecteddir
 
 ![](/Tema1/img3/Screenshot_35.png)
 
+Y modificamos la configuración de Apache de nuestro dominio.
+
 ```
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
 ![](/Tema1/img3/Screenshot_36.png)
+
+Introducimos lo siguiente.
 
 ```
 DBDriver mysql
@@ -160,6 +188,8 @@ AuthDBDUserPWQuery "SELECT passwd FROM mysql_auth WHERE username = %s"
 ```
 
 ![](/Tema1/img3/Screenshot_37.png)
+
+Y reiniciamos Apache.
 
 ```
 sudo systemctl restart apache2
