@@ -203,7 +203,9 @@ Ahora cuando entremos al directorio por acceso web, nos pedirá el usuario y con
 ![](/Tema1/img3/Screenshot_40.png)
 ![](/Tema1/img3/Screenshot_41.png)
 
-# Instalación del servidor web Apache
+# Certificados SSL
+
+Abrimos los puertos http y https.
 
 ```
 sudo uf allow "Apache Full"
@@ -211,11 +213,15 @@ sudo uf allow "Apache Full"
 
 ![](/Tema1/img3/Screenshot_42.png)
 
+Activamos el módulo necesario.
+
 ```
 sudo a2enmod ssl
 ```
 
 ![](/Tema1/img3/Screenshot_43.png)
+
+Y reiniciamos Apache
 
 ```
 sudo systemctl restart apache2
@@ -223,11 +229,15 @@ sudo systemctl restart apache2
 
 ![](/Tema1/img3/Screenshot_44.png)
 
+Creamos el certificado.
+
 ```
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 ```
 
 ![](/Tema1/img3/Screenshot_45.png)
+
+Importante en Common Name introducir nuestra IP o nombre de dominio configurado.
 
 ```
 Country Name (2 letter code) [XX]:ES
@@ -241,11 +251,15 @@ Email Address []:webmaster@example.com
 
 ![](/Tema1/img3/Screenshot_46.png)
 
+Y modificamos la configuración de Apache de nuestro dominio.
+
 ```
 sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
 ![](/Tema1/img3/Screenshot_47.png)
+
+Introducimos lo siguiente en un VirtualHost en el puerto 443.
 
 ```
 <VirtualHost *:443>
@@ -262,6 +276,8 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 
 ![](/Tema1/img3/Screenshot_48.png)
 ![](/Tema1/img3/Screenshot_49.png)
+
+Reiniciamos Apache.
 
 ```
 sudo apache2ctl configtest
