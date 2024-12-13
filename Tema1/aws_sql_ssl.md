@@ -36,19 +36,11 @@ sudo apt-get install mariadb-server mariadb-client -y
 sudo systemctl enable apache2
 ```
 
-![](/Tema1/img3/Screenshot_25.png)
-
-```
-sudo systemctl enable apache2
-```
-
-![](/Tema1/img3/Screenshot_26.png)
-
 ```
 sudo systemctl enable mysql
 ```
 
-![](/Tema1/img3/Screenshot_27.png)
+![](/Tema1/img3/Screenshot_25.png)
 
 ```
 sudo mysql -u root -p
@@ -58,84 +50,122 @@ sudo mysql -u root -p
 create database defaultsite_db;
 ```
 
+![](/Tema1/img3/Screenshot_26.png)
+
+```
+GRANT SELECT, INSERT, UPDATE, DELETE ON defaultsite_db.* TO 'defaultsite_admin'@'localhost' IDENTIFIED BY 'usuario';
+```
+
+![](/Tema1/img3/Screenshot_27.png)
+
+```
+GRANT SELECT, INSERT, UPDATE, DELETE ON defaultsite_db.* TO 'defaultsite_admin'@'localhost.localdomain' IDENTIFIED BY 'password';
+```
+
 ![](/Tema1/img3/Screenshot_28.png)
 
 ```
-
+flush privileges;
 ```
 
 ![](/Tema1/img3/Screenshot_29.png)
 
 ```
-
+use defaultsite_db;
 ```
 
 ![](/Tema1/img3/Screenshot_30.png)
 
 ```
-
+create table mysql_auth ( username varchar(191) not null, passwd varchar(191), groups varchar(191), primary key (username) );
 ```
 
 ![](/Tema1/img3/Screenshot_31.png)
 
 ```
-
+htpasswd -bns siteuser siteuser
 ```
 
 ![](/Tema1/img3/Screenshot_32.png)
 
 ```
-
+INSERT INTO `mysql_auth` (`username`, `passwd`, `groups`) VALUES('siteuser', '{SHA}tk7HEH6Wo7SKT6+3FHCgiGnJ6dA=', 'sitegroup');
 ```
 
 ![](/Tema1/img3/Screenshot_33.png)
 
 ```
+sudo a2enmod dbd
+```
 
+```
+sudo a2enmod authn_dbd
+```
+
+```
+sudo a2enmod socache_shmcb
+```
+
+```
+sudo a2enmod authn_socache
 ```
 
 ![](/Tema1/img3/Screenshot_34.png)
 
 ```
+sudo mkdir /var/www/html/protecteddir
+```
 
+```
+sudo chown -R www-data:www-data /var/www/html/protecteddir
 ```
 
 ![](/Tema1/img3/Screenshot_35.png)
 
 ```
-
+sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
 ![](/Tema1/img3/Screenshot_36.png)
 
 ```
-
+DBDriver mysql
+DBDParams "dbname=defaultsite_db user=defaultsite_admin pass=usuario"
+ 
+DBDMin 4 
+DBDKeep 8 
+DBDMax 20 
+DBDExptime 300
+ 
+<Directory "/var/www/html/protecteddir"> 
+# mod_authn_core and mod_auth_basic configuration 
+# for mod_authn_dbd 
+AuthType Basic 
+AuthName "My Server"
+ 
+# To cache credentials, put socache ahead of dbd here 
+AuthBasicProvider socache dbd
+ 
+# Also required for caching: tell the cache to cache dbd lookups! 
+AuthnCacheProvideFor dbd 
+AuthnCacheContext my-server
+ 
+# mod_authz_core configuration 
+Require valid-user
+ 
+# mod_authn_dbd SQL query to authenticate a user 
+AuthDBDUserPWQuery "SELECT passwd FROM mysql_auth WHERE username = %s"
 ```
 
 ![](/Tema1/img3/Screenshot_37.png)
 
 ```
-
+sudo systemctl restart apache2
 ```
 
 ![](/Tema1/img3/Screenshot_38.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_39.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_40.png)
-
-```
-
-```
-
 ![](/Tema1/img3/Screenshot_41.png)
 
 ```
