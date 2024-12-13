@@ -288,6 +288,9 @@ sudo systemctl reload apache2
 ```
 
 ![](/Tema1/img3/Screenshot_50.png)
+
+Y ya tenemos el certificado SSL autofirmado.
+
 ![](/Tema1/img3/Screenshot_54.png)
 ![](/Tema1/img3/Screenshot_55.png)
 ![](/Tema1/img3/Screenshot_56.png)
