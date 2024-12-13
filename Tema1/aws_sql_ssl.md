@@ -196,6 +196,9 @@ sudo systemctl restart apache2
 ```
 
 ![](/Tema1/img3/Screenshot_38.png)
+
+Ahora cuando entremos al directorio por acceso web, nos pedirá el usuario y contraseña.
+
 ![](/Tema1/img3/Screenshot_39.png)
 ![](/Tema1/img3/Screenshot_40.png)
 ![](/Tema1/img3/Screenshot_41.png)
