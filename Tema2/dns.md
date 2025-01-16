@@ -97,10 +97,36 @@ sudo journalctl -u bind9 -f
 
 ![](/Tema2/img/Screenshot_10.png)
 
+Y ahora vamos a poner como servidor DNS de nuestro servidor nuestra propia dirección IP.
 
+```
+sudo nano /etc/resolv.conf
+```
 
 ![](/Tema2/img/Screenshot_11.png)
+
+```
+nameserver DIRECCIÓN IP
+```
+
 ![](/Tema2/img/Screenshot_12.png)
+
+Y comprobamos que el DNS resuelve los nombres correctamente haciendo ping.
+
+```
+ping -c 1 google.com
+```
+
 ![](/Tema2/img/Screenshot_13.png)
+
+Ahora cambiamos el servidor DNS de una máquina de la misma red para comprobar que también funciona en otros clientes.
+
 ![](/Tema2/img/Screenshot_14.png)
+
+Y funciona correctamente.
+
+```
+ping google.com
+```
+
 ![](/Tema2/img/Screenshot_15.png)
