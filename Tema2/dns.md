@@ -64,10 +64,41 @@ options {
 
 ![](/Tema2/img/Screenshot_5.png)
 ![](/Tema2/img/Screenshot_6.png)
+
+Ejecutamos el siguiente comando para asegurarnos de que no hay ningún problema.
+
+```
+sudo named-checkconf
+```
+
 ![](/Tema2/img/Screenshot_7.png)
+
+Y reiniciamos el servidor Bind.
+
+```
+sudo systemctl restart bind9
+```
+
 ![](/Tema2/img/Screenshot_8.png)
+
+Vamos a permitir a Bind por el cortafuegos para que no ocurra ningún problema posible.
+
+```
+sudo ufw allow Bind9
+```
+
 ![](/Tema2/img/Screenshot_9.png)
+
+Podemos ejecutar el siguiente comando para que el servidor recoja logs de lo que ocurre.
+
+```
+sudo journalctl -u bind9 -f
+```
+
 ![](/Tema2/img/Screenshot_10.png)
+
+
+
 ![](/Tema2/img/Screenshot_11.png)
 ![](/Tema2/img/Screenshot_12.png)
 ![](/Tema2/img/Screenshot_13.png)
