@@ -1,4 +1,4 @@
-# Instalación del servidor DNS Bind
+# Instalación del servidor DNS Bind como Catching y Forwarding
 
 Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
