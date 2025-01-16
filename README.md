@@ -26,4 +26,4 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 
 | Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
-| [Ejercicio 1](Tema1/scripts.md) | Caching & fordwarding DNS Server |
+| [Ejercicio 1](Tema2/dns.md) | Caching & fordwarding DNS Server |
