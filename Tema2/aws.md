@@ -55,9 +55,15 @@ Importante colocarlo en nuestra VPC.
 
 Y en nuestro grupo de seguridad permitimos el NFS, el SSH, el HTTP y el MYSQL, para más adelante.
 
-![](/Tema2/img2/Screenshot_31.png)
-![](/Tema2/img2/Screenshot_35.png)
 ![](/Tema2/img2/Screenshot_41.png)
+
+Para utilizar el EFS necesitamos ejecutar el siguiente comando para instalar los útiles de NFS.
+
+```
+sudo apt install nfs-common
+```
+
+![](/Tema2/img2/Screenshot_35.png)
 
 # Instalación de Apache y PHP
 
