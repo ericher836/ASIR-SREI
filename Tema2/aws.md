@@ -1,4 +1,4 @@
-# Instalación del servidor DNS Bind como Catching y Forwarding
+# Creación de la VPC
 
 Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
@@ -18,6 +18,9 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_6.png)
 ![](/Tema2/img2/Screenshot_7.png)
 ![](/Tema2/img2/Screenshot_8.png)
+
+# Creación de la instancia
+
 ![](/Tema2/img2/Screenshot_9.png)
 ![](/Tema2/img2/Screenshot_10.png)
 ![](/Tema2/img2/Screenshot_11.png)
@@ -25,45 +28,23 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_13.png)
 ![](/Tema2/img2/Screenshot_14.png)
 ![](/Tema2/img2/Screenshot_15.png)
-![](/Tema2/img2/Screenshot_16.png)
-![](/Tema2/img2/Screenshot_17.png)
-![](/Tema2/img2/Screenshot_18.png)
-![](/Tema2/img2/Screenshot_19.png)
-![](/Tema2/img2/Screenshot_20.png)
-![](/Tema2/img2/Screenshot_21.png)
-![](/Tema2/img2/Screenshot_22.png)
-![](/Tema2/img2/Screenshot_23.png)
-![](/Tema2/img2/Screenshot_24.png)
-![](/Tema2/img2/Screenshot_25.png)
+
+# Creación del EFS
+
 ![](/Tema2/img2/Screenshot_26.png)
 ![](/Tema2/img2/Screenshot_27.png)
 ![](/Tema2/img2/Screenshot_28.png)
 ![](/Tema2/img2/Screenshot_29.png)
 ![](/Tema2/img2/Screenshot_30.png)
 ![](/Tema2/img2/Screenshot_31.png)
-![](/Tema2/img2/Screenshot_32.png)
-![](/Tema2/img2/Screenshot_33.png)
-![](/Tema2/img2/Screenshot_34.png)
 ![](/Tema2/img2/Screenshot_35.png)
-![](/Tema2/img2/Screenshot_36.png)
-![](/Tema2/img2/Screenshot_37.png)
-![](/Tema2/img2/Screenshot_38.png)
-![](/Tema2/img2/Screenshot_39.png)
-![](/Tema2/img2/Screenshot_40.png)
 ![](/Tema2/img2/Screenshot_41.png)
+
+# Creación de la base de datos
+
 ![](/Tema2/img2/Screenshot_42.png)
 ![](/Tema2/img2/Screenshot_43.png)
 ![](/Tema2/img2/Screenshot_44.png)
-![](/Tema2/img2/Screenshot_45.png)
-![](/Tema2/img2/Screenshot_46.png)
-![](/Tema2/img2/Screenshot_47.png)
-![](/Tema2/img2/Screenshot_48.png)
-![](/Tema2/img2/Screenshot_49.png)
-![](/Tema2/img2/Screenshot_50.png)
-![](/Tema2/img2/Screenshot_51.png)
-![](/Tema2/img2/Screenshot_52.png)
-![](/Tema2/img2/Screenshot_53.png)
-![](/Tema2/img2/Screenshot_54.png)
 ![](/Tema2/img2/Screenshot_55.png)
 ![](/Tema2/img2/Screenshot_56.png)
 ![](/Tema2/img2/Screenshot_57.png)
