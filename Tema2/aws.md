@@ -53,7 +53,7 @@ Importante colocarlo en nuestra VPC.
 
 ![](/Tema2/img2/Screenshot_27.png)
 
-Y en nuestro grupo de seguridad permitimos el NFS, el SSH, el HTTP y el MYSQL, para más adelante.
+Y en nuestro grupo de seguridad permitimos el NFS, el SSH, el HTTP y el MYSQL; para más adelante.
 
 ![](/Tema2/img2/Screenshot_41.png)
 
@@ -72,7 +72,21 @@ sudo apt update
 ```
 
 ![](/Tema2/img2/Screenshot_56.png)
+
+```
+sudo apt install apache2
+```
+
 ![](/Tema2/img2/Screenshot_57.png)
+
+```
+sudo systemctl start apache2
+```
+
+```
+sudo systemctl enable apache2
+```
+
 ![](/Tema2/img2/Screenshot_58.png)
 ![](/Tema2/img2/Screenshot_59.png)
 ![](/Tema2/img2/Screenshot_60.png)
