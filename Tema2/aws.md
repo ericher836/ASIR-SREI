@@ -10,5 +10,5 @@ sudo apt update
 sudo apt upgrade
 ```
 
-![](/Tema2/img/Screenshot_1.png)
+![](/Tema2/img2/Screenshot_1.png)
 
