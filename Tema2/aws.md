@@ -45,11 +45,16 @@ Y ya está creada la instancia, llamada practica1_1_pub
 
 # Creación del EFS
 
+Nos dirigimos a EFS en AWS y creamos un sistema de archivos.
+
 ![](/Tema2/img2/Screenshot_26.png)
+
+Importante colocarlo en nuestra VPC.
+
 ![](/Tema2/img2/Screenshot_27.png)
-![](/Tema2/img2/Screenshot_28.png)
-![](/Tema2/img2/Screenshot_29.png)
-![](/Tema2/img2/Screenshot_30.png)
+
+Y en nuestro grupo de seguridad permitimos el NFS, el SSH, el HTTP y el MYSQL, para más adelante.
+
 ![](/Tema2/img2/Screenshot_31.png)
 ![](/Tema2/img2/Screenshot_35.png)
 ![](/Tema2/img2/Screenshot_41.png)
