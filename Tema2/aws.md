@@ -67,17 +67,24 @@ sudo apt install nfs-common
 
 # Instalación de Apache y PHP
 
+Apache nos servirá para montar dentro Wordpress y PHP es necesario para ejecutar los archivos de este.
+Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
+
 ```
 sudo apt update
 ```
 
 ![](/Tema2/img2/Screenshot_56.png)
 
+E instalamos Apache.
+
 ```
 sudo apt install apache2
 ```
 
 ![](/Tema2/img2/Screenshot_57.png)
+
+Y lo iniciamos y habilitamos.
 
 ```
 sudo systemctl start apache2
@@ -88,19 +95,20 @@ sudo systemctl enable apache2
 ```
 
 ![](/Tema2/img2/Screenshot_58.png)
+
+Y ya está Apache funcionando.
+
 ![](/Tema2/img2/Screenshot_59.png)
 
-```
-sudo apt upgrade
-```
-
-![](/Tema2/img2/Screenshot_60.png)
+Ahora añadimos el repositorio de PHP, ya que no estaba en mi sistema.
 
 ```
 sudo add-apt-repository ppa:ondrej/php
 ```
 
 ![](/Tema2/img2/Screenshot_61.png)
+
+E instalamos todos los útiles.
 
 ```
 sudo apt install php7.4 libapache2-mod-php7.4 php7.4-cli
@@ -114,9 +122,7 @@ sudo apt install php7.4-mysql
 
 ![](/Tema2/img2/Screenshot_63.png)
 
-```
-sudo systemctl restart apache2
-```
+Vemos que PHP se ha instalado correctamente
 
 ```
 php -v
