@@ -10,7 +10,6 @@ sudo apt update
 sudo apt upgrade
 ```
 
-![](/Tema2/img2/Screenshot_1.png)
 ![](/Tema2/img2/Screenshot_2.png)
 ![](/Tema2/img2/Screenshot_3.png)
 ![](/Tema2/img2/Screenshot_4.png)
@@ -40,12 +39,8 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_35.png)
 ![](/Tema2/img2/Screenshot_41.png)
 
-# Creación de la base de datos
+# Instalación de Apache y PHP
 
-![](/Tema2/img2/Screenshot_42.png)
-![](/Tema2/img2/Screenshot_43.png)
-![](/Tema2/img2/Screenshot_44.png)
-![](/Tema2/img2/Screenshot_55.png)
 ![](/Tema2/img2/Screenshot_56.png)
 ![](/Tema2/img2/Screenshot_57.png)
 ![](/Tema2/img2/Screenshot_58.png)
@@ -55,6 +50,12 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_62.png)
 ![](/Tema2/img2/Screenshot_63.png)
 ![](/Tema2/img2/Screenshot_64.png)
+
+# Creación de la base de datos
+
+![](/Tema2/img2/Screenshot_42.png)
+![](/Tema2/img2/Screenshot_43.png)
+![](/Tema2/img2/Screenshot_44.png)
 ![](/Tema2/img2/Screenshot_65.png)
 ![](/Tema2/img2/Screenshot_66.png)
 ![](/Tema2/img2/Screenshot_67.png)
@@ -65,6 +66,9 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_72.png)
 ![](/Tema2/img2/Screenshot_73.png)
 ![](/Tema2/img2/Screenshot_74.png)
+
+# Instalación y configuración de Wordpress
+
 ![](/Tema2/img2/Screenshot_75.png)
 ![](/Tema2/img2/Screenshot_76.png)
 ![](/Tema2/img2/Screenshot_77.png)
