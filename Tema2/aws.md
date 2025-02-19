@@ -1,21 +1,25 @@
 # Creación de la VPC
 
-Primero nos dirigimos al panel de VPC en AWS.
-
-```
-sudo apt update
-```
-
-```
-sudo apt upgrade
-```
+Primero nos dirigimos al panel de VPC en AWS y le damos a Crear VPC.
 
 ![](/Tema2/img2/Screenshot_2.png)
+
+Una vez aquí, la configuramos de la siguiente forma para tener 2 subredes públicas y 2 subredes pivadas.
+
 ![](/Tema2/img2/Screenshot_3.png)
 ![](/Tema2/img2/Screenshot_4.png)
 ![](/Tema2/img2/Screenshot_5.png)
+
+Y ya se está creando la VPC.
+
 ![](/Tema2/img2/Screenshot_6.png)
+
+Aquí podemos ver todos sus detalles.
+
 ![](/Tema2/img2/Screenshot_7.png)
+
+Y el grupo de seguridad que usaremos para todas nuestras máquinas.
+
 ![](/Tema2/img2/Screenshot_8.png)
 
 # Creación de la instancia
