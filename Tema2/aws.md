@@ -24,11 +24,22 @@ Y el grupo de seguridad que usaremos para todas nuestras máquinas.
 
 # Creación de la instancia
 
+En EC2 vamos a lanzar una instancia.
+
 ![](/Tema2/img2/Screenshot_9.png)
+
+Y la configuramos de la siguiente forma para crear una máquina en la subred pública.
+
 ![](/Tema2/img2/Screenshot_10.png)
 ![](/Tema2/img2/Screenshot_11.png)
+
+En el grupo de seguridad debemos seleccionar el de la vpc por defecto, no crear uno como aparece en la imagen.
+
 ![](/Tema2/img2/Screenshot_12.png)
 ![](/Tema2/img2/Screenshot_13.png)
+
+Y ya está creada la instancia, llamada practica1_1_pub
+
 ![](/Tema2/img2/Screenshot_14.png)
 ![](/Tema2/img2/Screenshot_15.png)
 
