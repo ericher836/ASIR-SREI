@@ -89,10 +89,39 @@ sudo systemctl enable apache2
 
 ![](/Tema2/img2/Screenshot_58.png)
 ![](/Tema2/img2/Screenshot_59.png)
+
+```
+sudo apt upgrade
+```
+
 ![](/Tema2/img2/Screenshot_60.png)
+
+```
+sudo add-apt-repository ppa:ondrej/php
+```
+
 ![](/Tema2/img2/Screenshot_61.png)
+
+```
+sudo apt install php7.4 libapache2-mod-php7.4 php7.4-cli
+```
+
 ![](/Tema2/img2/Screenshot_62.png)
+
+```
+sudo apt install php7.4-mysql
+```
+
 ![](/Tema2/img2/Screenshot_63.png)
+
+```
+sudo systemctl restart apache2
+```
+
+```
+php -v
+```
+
 ![](/Tema2/img2/Screenshot_64.png)
 
 # Creación de la base de datos
