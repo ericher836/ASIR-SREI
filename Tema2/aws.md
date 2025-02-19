@@ -1,6 +1,6 @@
 # Creación de la VPC
 
-Primero actualizamos la lista de paquetes disponibles en los repositorios configurados en el sistema.
+Primero nos dirigimos al panel de VPC en AWS.
 
 ```
 sudo apt update
@@ -40,6 +40,10 @@ sudo apt upgrade
 ![](/Tema2/img2/Screenshot_41.png)
 
 # Instalación de Apache y PHP
+
+```
+sudo apt update
+```
 
 ![](/Tema2/img2/Screenshot_56.png)
 ![](/Tema2/img2/Screenshot_57.png)
