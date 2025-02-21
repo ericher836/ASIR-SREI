@@ -166,13 +166,15 @@ Para ello, dentro de la máquina, descargamos el directorio de Wordpress en el d
 wget http://wordpress.org/latest.tar.gz
 ```
 
+![](/Tema2/img2/Screenshot_75.png)
+
 Y descomprimimos el fichero que hemos descargado.
 
 ```
 sudo tar -xf latest.tar.gz
 ```
 
-![](/Tema2/img2/Screenshot_75.png)
+![](/Tema2/img2/Screenshot_76.png)
 
 Yo voy a dejar el directorio limpio.
 
@@ -184,7 +186,7 @@ sudo rm -R latest.tar.gz
 sudo rm -R index.html
 ```
 
-![](/Tema2/img2/Screenshot_76.png)
+![](/Tema2/img2/Screenshot_77.png)
 
 Y extraemos el contenido de Wordpress en el directorio de Apache.
 
@@ -192,7 +194,7 @@ Y extraemos el contenido de Wordpress en el directorio de Apache.
 sudo cp -r wordpress/* /var/www/html/
 ```
 
-![](/Tema2/img2/Screenshot_77.png)
+![](/Tema2/img2/Screenshot_78.png)
 
 Ahora vamos a hacer la conexión con la base de datos.
 
@@ -200,7 +202,6 @@ Ahora vamos a hacer la conexión con la base de datos.
 
 ```
 
-![](/Tema2/img2/Screenshot_78.png)
 ![](/Tema2/img2/Screenshot_79.png)
 ![](/Tema2/img2/Screenshot_80.png)
 ![](/Tema2/img2/Screenshot_81.png)
