@@ -224,14 +224,50 @@ FLUSH PRIVILEGES;
 
 ![](/Tema2/img2/Screenshot_80.png)
 
-hola
+Y ya podemos acceder a Wordpress con la IP pública.
 
 ![](/Tema2/img2/Screenshot_81.png)
+
+Para poder acceder del todo, hay que crear a partir de la plantilla el archivo wp-config.php
+
+```
+sudo cp wp-config-sample.php wp-config.php
+```
+
+```
+sudo nano wp-config.php
+```
+
 ![](/Tema2/img2/Screenshot_88.png)
+
+Y dentro del archivo ponemos los datos de la base de datos y el usuario que hemos creado.
+
 ![](/Tema2/img2/Screenshot_89.png)
+
+Los ponemos en Wordpress y luego ponemos un nombre para el sitio, un usuario, contraseña y un email.
+
 ![](/Tema2/img2/Screenshot_90.png)
+
+Y listo, ya podemos acceder a Wordpress con ese usuario.
+
 ![](/Tema2/img2/Screenshot_91.png)
 ![](/Tema2/img2/Screenshot_92.png)
 ![](/Tema2/img2/Screenshot_92_1.png)
+
+Para terminar, montamos el EFS en la carpeta wp-content de Wordpress.
+
+```
+sudo mv wp-content wp-content-old
+```
+
+```
+sudo mkdir wp-content
+```
+
 ![](/Tema2/img2/Screenshot_93.png)
+
+```
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport IP:/ wp-content
+```
+
 ![](/Tema2/img2/Screenshot_94.png)
