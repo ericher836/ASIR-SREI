@@ -227,12 +227,6 @@ FLUSH PRIVILEGES;
 hola
 
 ![](/Tema2/img2/Screenshot_81.png)
-![](/Tema2/img2/Screenshot_82.png)
-![](/Tema2/img2/Screenshot_83.png)
-![](/Tema2/img2/Screenshot_84.png)
-![](/Tema2/img2/Screenshot_85.png)
-![](/Tema2/img2/Screenshot_86.png)
-![](/Tema2/img2/Screenshot_87.png)
 ![](/Tema2/img2/Screenshot_88.png)
 ![](/Tema2/img2/Screenshot_89.png)
 ![](/Tema2/img2/Screenshot_90.png)
