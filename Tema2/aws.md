@@ -199,11 +199,33 @@ sudo cp -r wordpress/* /var/www/html/
 Ahora vamos a hacer la conexión con la base de datos.
 
 ```
-
+mysql -u admin -h NOMBRE_DEL_HOST -p
 ```
 
 ![](/Tema2/img2/Screenshot_79.png)
+
+Y dentro de MySQL creamos una base de datos y un usuario con todos los privilegios.
+
+```
+CREATE DATABASE wordpress;
+```
+
+```
+CREATE USER 'wordpress_user'@'%' IDENTIFIED BY 'password123';
+```
+
+```
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress_user'@'%';
+```
+
+```
+FLUSH PRIVILEGES;
+```
+
 ![](/Tema2/img2/Screenshot_80.png)
+
+hola
+
 ![](/Tema2/img2/Screenshot_81.png)
 ![](/Tema2/img2/Screenshot_82.png)
 ![](/Tema2/img2/Screenshot_83.png)
