@@ -160,15 +160,46 @@ Y una vez creada vamos a conectarla la una máquina EC2.
 
 # Instalación y configuración de Wordpress
 
-Para ello, dentro de la máquina, descargamos el directorio de Wordpress.
+Para ello, dentro de la máquina, descargamos el directorio de Wordpress en el directorio de Apache.
 
 ```
 wget http://wordpress.org/latest.tar.gz
 ```
 
+Y descomprimimos el fichero que hemos descargado.
+
+```
+sudo tar -xf latest.tar.gz
+```
+
 ![](/Tema2/img2/Screenshot_75.png)
+
+Yo voy a dejar el directorio limpio.
+
+```
+sudo rm -R latest.tar.gz
+```
+
+```
+sudo rm -R index.html
+```
+
 ![](/Tema2/img2/Screenshot_76.png)
+
+Y extraemos el contenido de Wordpress en el directorio de Apache.
+
+```
+sudo cp -r wordpress/* /var/www/html/
+```
+
 ![](/Tema2/img2/Screenshot_77.png)
+
+Ahora vamos a hacer la conexión con la base de datos.
+
+```
+
+```
+
 ![](/Tema2/img2/Screenshot_78.png)
 ![](/Tema2/img2/Screenshot_79.png)
 ![](/Tema2/img2/Screenshot_80.png)
