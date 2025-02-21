@@ -132,21 +132,39 @@ php -v
 
 # Creación de la base de datos
 
+Primero nos dirigimos al apartado de base de datos en AWS (RDS)
+
 ![](/Tema2/img2/Screenshot_42.png)
-![](/Tema2/img2/Screenshot_43.png)
-![](/Tema2/img2/Screenshot_44.png)
+
+Y seleccionamos la siguiente configuración para crear la base de datos.
+
 ![](/Tema2/img2/Screenshot_65.png)
 ![](/Tema2/img2/Screenshot_66.png)
 ![](/Tema2/img2/Screenshot_67.png)
 ![](/Tema2/img2/Screenshot_68.png)
+
+Importante elegir nuestra VPC.
+
 ![](/Tema2/img2/Screenshot_69.png)
 ![](/Tema2/img2/Screenshot_70.png)
+
+Podemos crear una base de datos inicial.
+
 ![](/Tema2/img2/Screenshot_71.png)
+
+Y una vez creada vamos a conectarla la una máquina EC2.
+
 ![](/Tema2/img2/Screenshot_72.png)
 ![](/Tema2/img2/Screenshot_73.png)
 ![](/Tema2/img2/Screenshot_74.png)
 
 # Instalación y configuración de Wordpress
+
+Para ello, dentro de la máquina, descargamos el directorio de Wordpress.
+
+```
+wget http://wordpress.org/latest.tar.gz
+```
 
 ![](/Tema2/img2/Screenshot_75.png)
 ![](/Tema2/img2/Screenshot_76.png)
