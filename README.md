@@ -27,4 +27,9 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 | Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
 | [Ejercicio 1](Tema2/dns.md) | Caching & Forwarding DNS Server |
-| [Ejercicio 2](Tema2/aws.md) | Instalación Wordpress |
+
+**Tema 3 - AWS**
+
+| Número de ejercicio | Ejercicios de introducción |
+| --- | --- |
+| [Ejercicio 1](Tema2/aws.md) | Instalación Wordpress |
