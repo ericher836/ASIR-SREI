@@ -16,7 +16,12 @@ sudo apt install nfs-common
 ![](/Tema3/img/Screenshot_28.png)
 
 2. Muestra las imágenes Docker instaladas.
+
+![](/Tema3/img3/Screenshot_19.png)
+
 3. Muestra los contenedores Docker.
+
+![](/Tema3/img3/Screenshot_17.png)
 
 ## Segundo Artículo
 1. Edita el fichero `Dockerfile`.
