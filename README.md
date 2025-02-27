@@ -38,4 +38,4 @@ Este repositorio incluye actividades llevadas a cabo en el ciclo Administración
 
 | Número de ejercicio | Ejercicios de introducción |
 | --- | --- |
-| TEST | TEST |
+| Ejercicio 1 | TEST |
