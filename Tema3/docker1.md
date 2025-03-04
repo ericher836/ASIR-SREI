@@ -129,7 +129,7 @@ sudo docker login -u nombre_usuario
 
 ![](/Tema3/img/Screenshot_58.png)
 
-
+Etiquetamos la imagen local.
 
 ```
 sudo docker tag getting-started nombre_usuario/getting-started:latest
@@ -137,15 +137,22 @@ sudo docker tag getting-started nombre_usuario/getting-started:latest
 
 ![](/Tema3/img/Screenshot_59.png)
 
+Creamos un nuevo commit del contenedor.
+
 ```
 sudo docker commit nombre_contenedor nombe_repositorio
 ```
 
 ![](/Tema3/img/Screenshot_60.png)
 
+Y subimos la imagen al repositorio.
+
 ```
 sudo docker push nombre_repositorio
 ```
 
 ![](/Tema3/img/Screenshot_61.png)
+
+Y ya aparece en nuestro repositorio.
+
 ![](/Tema3/img/Screenshot_62.png)
