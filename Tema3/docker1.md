@@ -105,19 +105,31 @@ Y funciona correctamente.
 
 4. Crea una cuenta en [hub.docker.com](https://hub.docker.com).
 
+Nos creamos una cuenta.
+
 ![](/Tema3/img/Screenshot_53.png)
+
+Y una vez dentro vamos a crear un repositorio.
+
 ![](/Tema3/img/Screenshot_54.png)
 ![](/Tema3/img/Screenshot_55.png)
 ![](/Tema3/img/Screenshot_56.png)
+
+Le ponemos un nombre y lo creamos.
+
 ![](/Tema3/img/Screenshot_57.png)
 
 5. Publícalo.
+
+Iniciamos sesión con docker.
 
 ```
 sudo docker login -u nombre_usuario
 ```
 
 ![](/Tema3/img/Screenshot_58.png)
+
+
 
 ```
 sudo docker tag getting-started nombre_usuario/getting-started:latest
