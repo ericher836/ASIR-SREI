@@ -3,17 +3,13 @@
 ## Primer Artículo
 1. Ejecuta la imagen `hello-world`.
 
+Para ejecutar la imagen hello-world, usamos el siguiente comando.
+
 ```
 sudo docker run hello-world
 ```
 
 ![](/Tema3/img/Screenshot_15.png)
-
-```
-sudo docker ps
-```
-
-![](/Tema3/img/Screenshot_16.png)
 
 ```
 sudo docker ps -a
