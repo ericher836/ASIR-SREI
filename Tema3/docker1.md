@@ -11,11 +11,15 @@ sudo docker run hello-world
 
 ![](/Tema3/img/Screenshot_15.png)
 
+Así podemos ver el contenedor que acabamos de crear.
+
 ```
 sudo docker ps -a
 ```
 
 ![](/Tema3/img/Screenshot_17.png)
+
+Y con el comando logs podemos ver lo que está haciendo.
 
 ```
 sudo docker logs nombre_contenedor
@@ -25,6 +29,8 @@ sudo docker logs nombre_contenedor
 
 2. Muestra las imágenes Docker instaladas.
 
+Lo hacemos con el siguiente comando.
+
 ```
 sudo docker images
 ```
@@ -32,6 +38,8 @@ sudo docker images
 ![](/Tema3/img/Screenshot_19.png)
 
 3. Muestra los contenedores Docker.
+
+Lo hacemos con el siguiente comando.
 
 ```
 sudo docker ps -a
@@ -43,12 +51,16 @@ sudo docker ps -a
 
 1. Edita el fichero `Dockerfile`.
 
+Primero vamos a copiar un repositorio de GitHub que contiene una aplicación de ejemplo.
+
 ```
 sudo git clone https://github.com/docker/getting-started-app.git
 ```
 
 ![](/Tema3/img/Screenshot_46.png)
 ![](/Tema3/img/Screenshot_47.png)
+
+Y se edita el archivo Dockerfile para definir cómo se construirá la imagen.
 
 ```
 # syntax=docker/dockerfile:1
@@ -65,6 +77,8 @@ EXPOSE 3000
 
 2. Construye el contenedor.
 
+Lo hacemos con el comando build.
+
 ```
 sudo docker build -t getting-started .
 ```
@@ -73,12 +87,20 @@ sudo docker build -t getting-started .
 
 3. Ejecútalo.
 
+Y lo ejecutamos con run.
+
 ```
 sudo docker run -d -p 127.0.0.1:3000:3000 getting-started
 ```
 
 ![](/Tema3/img/Screenshot_50.png)
+
+Ya está corriendo.
+
 ![](/Tema3/img/Screenshot_51.png)
+
+Y funciona correctamente.
+
 ![](/Tema3/img/Screenshot_52.png)
 
 4. Crea una cuenta en [hub.docker.com](https://hub.docker.com).
