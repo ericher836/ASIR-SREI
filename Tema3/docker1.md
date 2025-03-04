@@ -4,14 +4,26 @@
 1. Ejecuta la imagen `hello-world`.
 
 ```
-sudo apt install nfs-common
+sudo docker run hello-world
 ```
 
 ![](/Tema3/img/Screenshot_15.png)
 
+```
+sudo docker ps
+```
+
 ![](/Tema3/img/Screenshot_16.png)
 
+```
+sudo docker ps -a
+```
+
 ![](/Tema3/img/Screenshot_17.png)
+
+```
+sudo docker logs nombre_contenedor
+```
 
 ![](/Tema3/img/Screenshot_28.png)
 
