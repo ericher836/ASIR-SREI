@@ -114,7 +114,7 @@ sudo docker commit nombre_contenedor nombe_repositorio
 ![](/Tema3/img/Screenshot_60.png)
 
 ```
-sudo docker nombre_repositorio
+sudo docker push nombre_repositorio
 ```
 
 ![](/Tema3/img/Screenshot_61.png)
