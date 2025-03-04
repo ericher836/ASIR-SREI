@@ -29,9 +29,17 @@ sudo docker logs nombre_contenedor
 
 2. Muestra las imágenes Docker instaladas.
 
+```
+sudo docker images
+```
+
 ![](/Tema3/img/Screenshot_19.png)
 
 3. Muestra los contenedores Docker.
+
+```
+sudo docker ps -a
+```
 
 ![](/Tema3/img/Screenshot_17.png)
 
