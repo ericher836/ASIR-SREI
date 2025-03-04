@@ -1,51 +1,84 @@
-text
 # Comandos Docker
 
 ## Descargar imágenes
 Descargar la imagen de Ubuntu
-docker pull ubuntu
+
+```
+sudo docker pull ubuntu
+```
 
 Descargar la imagen de Hello-World
-docker pull hello-world
+
+```
+sudo docker pull hello-world
+```
 
 Descargar la imagen de Nginx
-docker pull nginx
 
-text
+```
+sudo docker pull nginx
+```
 
 ## Listar imágenes
 Mostrar un listado de todas las imágenes
-docker images
 
-text
+```
+sudo docker images
+```
 
 ## Ejecutar contenedores
 Ejecutar un contenedor Hello-World y nombrarlo "myhello1"
-docker run --name myhello1 hello-world
+
+```
+sudo docker run --name myhello1 hello-world
+```
 
 Ejecutar un contenedor Hello-World y nombrarlo "myhello2"
-docker run --name myhello2 hello-world
+
+```
+sudo docker run --name myhello2 hello-world
+```
 
 Ejecutar un contenedor Hello-World y nombrarlo "myhello3"
-docker run --name myhello3 hello-world
 
-text
+```
+sudo docker run --name myhello3 hello-world
+```
 
 ## Gestionar contenedores
 Mostrar los contenedores que se están ejecutando
-docker ps
+
+```
+sudo docker ps
+```
 
 Detener el contenedor "myhello1"
-docker stop myhello1
+
+```
+sudo docker stop myhello1
+```
 
 Detener el contenedor "myhello2"
-docker stop myhello2
+
+```
+sudo docker stop myhello2
+```
 
 Eliminar el contenedor "myhello1"
-docker rm myhello1
+
+```
+sudo docker rm myhello1
+```
 
 Mostrar los contenedores que se están ejecutando
-docker ps
+
+```
+sudo docker ps
+```
 
 Eliminar todos los contenedores
+
+```
+sudo su
 docker rm $(docker ps -a -q)
+```
