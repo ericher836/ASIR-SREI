@@ -58,7 +58,7 @@ sudo docker run -d --name servidor_wp \
 ![](/Tema3/im3/Screenshot_7.png)
 
 ```
-sudo docker network create red_temperaturas
+sudo docker ps
 ```
 
 ![](/Tema3/im3/Screenshot_8.png)
@@ -67,26 +67,28 @@ sudo docker network create red_temperaturas
 ## Despliegue de tomcat + nginx
 
 ```
-sudo docker network create red_temperaturas
+sudo docker network create red_tomcat
 ```
 
 ![](/Tema3/im3/Screenshot_10.png)
 ![](/Tema3/im3/Screenshot_11.png)
-
-```
-sudo docker network create red_temperaturas
-```
-
 ![](/Tema3/im3/Screenshot_12.png)
 
 ```
-sudo docker network create red_temperaturas
+sudo docker run -d --name aplicacionjava \
+                --network red_tomcat \
+                -v /home/vagrant/tomcat/sample.war:/usr/local/tomcat/webapps/sample.war:ro \
+                tomcat:9.0
 ```
 
 ![](/Tema3/im3/Screenshot_13.png)
 
 ```
-sudo docker network create red_temperaturas
+sudo docker run -d --name proxy \
+                -p 80:80 \
+                --network red_tomcat \
+                -v /home/vagrant/tomcat/default.conf:/etc/nginx/conf.d/default.conf:ro \
+                nginx
 ```
 
 ![](/Tema3/im3/Screenshot_14.png)
