@@ -1,7 +1,6 @@
 # Ejemplos Docker Módulo 3
 
 ## Despliegue de la aplicación Temperaturas
-Descargar la imagen de Ubuntu
 
 ```
 sudo docker network create red_temperaturas
