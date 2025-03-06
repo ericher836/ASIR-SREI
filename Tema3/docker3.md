@@ -38,11 +38,19 @@ El frontend será accesible en http://localhost:3000.
 
 ## Despliegue de Wordpress + mariadb
 
+Este despliegue crea un entorno WordPress con una base de datos MariaDB.
+
+Pasos:
+
+1. Crear una red Docker para WordPress:
+
 ```
 sudo docker network create red_wp
 ```
 
 ![](/Tema3/im3/Screenshot_5.png)
+
+2. Desplegar el contenedor de la base de datos MariaDB:
 
 ```
 sudo docker run -d --name servidor_mysql \
@@ -56,6 +64,8 @@ sudo docker run -d --name servidor_mysql \
 ```
 
 ![](/Tema3/im3/Screenshot_6.png)
+
+3. Desplegar WordPress y enlazarlo con la base de datos:
 
 ```
 sudo docker run -d --name servidor_wp \
@@ -71,14 +81,25 @@ sudo docker run -d --name servidor_wp \
 
 ![](/Tema3/im3/Screenshot_7.png)
 
+Para verificar los contenedores en ejecución:
+
 ```
 sudo docker ps
 ```
 
 ![](/Tema3/im3/Screenshot_8.png)
+
+El sitio de WordPress será accesible en http://localhost:123.
+
 ![](/Tema3/im3/Screenshot_9.png)
 
 ## Despliegue de tomcat + nginx
+
+Este despliegue configura un servidor Tomcat para ejecutar una aplicación Java y lo expone a través de Nginx como proxy inverso.
+
+Pasos:
+
+1. Crear una red Docker para la aplicación:
 
 ```
 sudo docker network create red_tomcat
@@ -87,6 +108,8 @@ sudo docker network create red_tomcat
 ![](/Tema3/im3/Screenshot_10.png)
 ![](/Tema3/im3/Screenshot_11.png)
 ![](/Tema3/im3/Screenshot_12.png)
+
+2. Desplegar el contenedor Tomcat con la aplicación Java:
 
 ```
 sudo docker run -d --name aplicacionjava \
@@ -97,6 +120,8 @@ sudo docker run -d --name aplicacionjava \
 
 ![](/Tema3/im3/Screenshot_13.png)
 
+3. Desplegar Nginx como proxy inverso para Tomcat:
+
 ```
 sudo docker run -d --name proxy \
                 -p 80:80 \
@@ -106,4 +131,7 @@ sudo docker run -d --name proxy \
 ```
 
 ![](/Tema3/im3/Screenshot_14.png)
+
+El servicio estará accesible en http://localhost.
+
 ![](/Tema3/im3/Screenshot_15.png)
