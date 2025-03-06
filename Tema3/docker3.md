@@ -4,11 +4,21 @@
 Descargar la imagen de Ubuntu
 
 ```
-sudo docker pull ubuntu
+sudo docker network create red_temperaturas
 ```
 
 ![](/Tema3/im3/Screenshot_1.png)
+
+```
+sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
+```
+
 ![](/Tema3/im3/Screenshot_2.png)
+
+```
+docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
+```
+
 ![](/Tema3/im3/Screenshot_3.png)
 ![](/Tema3/im3/Screenshot_4.png)
 
