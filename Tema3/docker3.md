@@ -1,6 +1,14 @@
 # Ejemplos Docker Módulo 3
 
+Este repositorio contiene ejemplos prácticos de despliegue de aplicaciones utilizando Docker. Se presentan diferentes escenarios, incluyendo el despliegue de una aplicación de temperaturas, un entorno WordPress con MariaDB y un servicio Tomcat con Nginx como proxy inverso.
+
 ## Despliegue de la aplicación Temperaturas
+
+Este ejemplo muestra cómo desplegar una aplicación de registro de temperaturas utilizando contenedores Docker para backend y frontend, comunicados a través de una red Docker.
+
+Pasos:
+
+1. Crear una red Docker para la aplicación:
 
 ```
 sudo docker network create red_temperaturas
@@ -8,17 +16,24 @@ sudo docker network create red_temperaturas
 
 ![](/Tema3/im3/Screenshot_1.png)
 
+2. Desplegar el backend de la aplicación:
+
 ```
 sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
 ```
 
 ![](/Tema3/im3/Screenshot_2.png)
 
+3. Desplegar el frontend de la aplicación y exponerlo en el puerto 3000:
+
 ```
 docker run -d -p 3000:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
 
 ![](/Tema3/im3/Screenshot_3.png)
+
+El frontend será accesible en http://localhost:3000.
+
 ![](/Tema3/im3/Screenshot_4.png)
 
 ## Despliegue de Wordpress + mariadb
