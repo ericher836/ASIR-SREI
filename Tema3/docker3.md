@@ -106,7 +106,13 @@ sudo docker network create red_tomcat
 ```
 
 ![](/Tema3/im3/Screenshot_10.png)
+
+Necesitamos descargar estos archivos del repositorio.
+
 ![](/Tema3/im3/Screenshot_11.png)
+
+Y guardarlos en una carpeta.
+
 ![](/Tema3/im3/Screenshot_12.png)
 
 2. Desplegar el contenedor Tomcat con la aplicación Java:
