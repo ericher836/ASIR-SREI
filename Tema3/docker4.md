@@ -48,6 +48,13 @@ sudo docker ps
 
 ![](/Tema3/img4/Screenshot_4.png)
 
+## Despliegue WordPress con MariaDB
+
+Pasos:
+
+1. Definición del archivo docker-compose.yml para WordPress.
+Ahora, creamos un nuevo archivo docker-compose.yml para el despliegue de WordPress con MariaDB. Este archivo define dos servicios: wordpress y db.
+
 ![](/Tema3/img4/Screenshot_5.png)
 
 ```yaml
@@ -82,17 +89,26 @@ volumes:
     mariadb_data:
 ```
 
+2. Despliegue de los contenedores de WordPress.
+Utilizamos Docker Compose para desplegar los contenedores de WordPress y MariaDB definidos en el nuevo archivo docker-compose.yml.
+
 ```
 sudo docker compose up -d
 ```
 
 ![](/Tema3/img4/Screenshot_7.png)
 
+3. Verificación del estado de los contenedores de WordPress.
+Comprobamos que los contenedores de WordPress y MariaDB se han iniciado correctamente.
+
 ```
 sudo docker ps
 ```
 
 ![](/Tema3/img4/Screenshot_8.png)
+
+4. Eliminación de los contenedores (opcional).
+Si queremos eliminar los contenedores creados, podemos usar el siguiente comando:
 
 ```
 sudo docker compose rm
