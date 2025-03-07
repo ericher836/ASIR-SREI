@@ -1,12 +1,12 @@
 # Ejemplos Docker Módulo 5
 
-Este repositorio contiene 
+Este repositorio contiene ejemplos de Dockerfiles y comandos para crear y ejecutar contenedores Docker, demostrando la construcción de imágenes personalizadas para aplicaciones web.
 
-## 
+## Construcción de imágenes con una una aplicación PHP
 
 Pasos:
 
-1. 
+1. Crear un Dockerfile para una aplicación web Apache con PHP:
 
 ```Dockerfile
 # syntax=docker/dockerfile:1
@@ -19,11 +19,15 @@ CMD apache2ctl -D FOREGROUND
 
 ![](/Tema3/img5/Screenshot_1.png)
 
+2. Construir la imagen Docker:
+
 ```
 sudo docker build -t josedom24/ejemplo2:v1 .
 ```
 
 ![](/Tema3/img5/Screenshot_2.png)
+
+3. Ejecutar un contenedor basado en la imagen creada
 
 ```
 sudo docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
@@ -32,6 +36,12 @@ sudo docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
 ![](/Tema3/img5/Screenshot_3.png)
 
 ![](/Tema3/img5/Screenshot_4.png)
+
+## Construcción de imágenes con una una aplicación PHP
+
+Pasos:
+
+1. Crear un Dockerfile para una aplicación Python:
 
 ```Dockerfile
 # syntax=docker/dockerfile:1
@@ -46,11 +56,15 @@ CMD python3 app.py
 
 ![](/Tema3/img5/Screenshot_5.png)
 
+2. Construir la imagen Docker para la aplicación Python:
+
 ```
 sudo docker build -t josedom24/ejemplo3:v1 .
 ```
 
 ![](/Tema3/img5/Screenshot_6.png)
+
+3. Ejecutar un contenedor basado en la imagen Python creada:
 
 ```
 sudo docker run -d -p 80:3000 --name ejemplo2 josedom24/ejemplo3:v1
