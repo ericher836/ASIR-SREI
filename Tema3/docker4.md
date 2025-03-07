@@ -2,8 +2,23 @@
 
 ![](/Tema3/img4/Screenshot_1.png)
 
-```
-sudo docker network create red_temperaturas
+```yaml
+version: '3.1'
+services:
+  frontend:
+    container_name: temperaturas-frontend
+    image: iesgn/temperaturas_frontend
+    restart: always
+    ports:
+      - 8081:3000
+    environment:
+      TEMP_SERVER: temperaturas-backend:5000
+    depends_on:
+      - backend
+  backend:
+    container_name: temperaturas-backend
+    image: iesgn/temperaturas_backend
+    restart: always
 ```
 
 ```
