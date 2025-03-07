@@ -35,9 +35,11 @@ sudo docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
 
 ![](/Tema3/img5/Screenshot_3.png)
 
+Y ya funciona
+
 ![](/Tema3/img5/Screenshot_4.png)
 
-## Construcción de imágenes con una una aplicación PHP
+## Construcción de imágenes con una una aplicación Python
 
 Pasos:
 
@@ -71,5 +73,7 @@ sudo docker run -d -p 80:3000 --name ejemplo2 josedom24/ejemplo3:v1
 ```
 
 ![](/Tema3/img5/Screenshot_7.png)
+
+Y ya funciona.
 
 ![](/Tema3/img5/Screenshot_8.png)
